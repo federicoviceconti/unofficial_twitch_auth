@@ -22,7 +22,7 @@ abstract class TwitchAuthentication {
   String getLoginLink({
     required String clientId,
     required String redirect,
-    List<LoginScope> scopes = const [LoginScope.openId]
+    List<LoginScope> scopes = const [LoginScope.openId],
   });
 
   /// Validate the [accessToken] retrieved via the OAuth process.
@@ -30,7 +30,7 @@ abstract class TwitchAuthentication {
   /// For more information, please read the link below:
   /// https://dev.twitch.tv/docs/authentication#validating-requests
   Future<HttpResult<AuthValidateResponse>> validate({
-    required String accessToken
+    required String accessToken,
   });
 
   /// Revoke the [accessToken] acquired during the OAuth process using the

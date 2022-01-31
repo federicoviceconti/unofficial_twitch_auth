@@ -17,10 +17,7 @@ class AuthValidateResponse extends BaseHttpResponse {
     this.scopes,
     this.userId,
     this.expiresIn,
-  }): super(
-    message: message,
-    status: status
-  );
+  }) : super(message: message, status: status);
 
   /// Convert the body of the HTTP response into the [AuthRevokeResponse]
   static AuthValidateResponse fromJson(Map<String, dynamic> json) {
@@ -44,7 +41,7 @@ class AuthValidateResponse extends BaseHttpResponse {
   static List<String> _convertScopeList(Map<String, dynamic> json) {
     try {
       return json['scopes'].map((it) => it?.toString()).cast<String>().toList();
-    } catch(e) {
+    } catch (e) {
       return [];
     }
   }
