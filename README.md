@@ -1,3 +1,5 @@
+# 📦 unofficial_twitch_auth
+
 This package allows to validate, revoke or authenticate your client using the newest Twitch API.
 
 Available on pub.dev: https://pub.dev/packages/unofficial_twitch_auth
