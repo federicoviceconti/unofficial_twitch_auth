@@ -1,5 +1,7 @@
 This package allows to validate, revoke or authenticate your client using the newest Twitch API.
 
+Available on pub.dev: https://pub.dev/packages/unofficial_twitch_auth
+
 ## Features
 
 It contains the following methods:
@@ -9,7 +11,7 @@ It contains the following methods:
 - revoke: the endpoint /oauth2/revoke allows to revoke the token
 
 For more information see the
-class [twitch_authentication.dart](https://github.com/federicoviceconti/unofficial_twitch_client_flutter/blob/master/external_modules/unofficial_twitch_auth/lib/twitch_authentication.dart)
+class [twitch_authentication.dart](lib/twitch_authentication.dart)
 
 ## Register your app on Twitch Dev console
 
@@ -52,20 +54,20 @@ Use the instance generated to use one of the following method for:
 Generate login URL:
 ```dart
 
-final urlLogin = authInstance?.getLoginLink(
+final urlLogin = authInstance.getLoginLink(
     clientId: 'my_client_id', redirect: 'http://myredirecturl');
 ```
 
 Validate access token
 ```dart
 
-final validate = authInstance?.validate(accessToken: 'zzz');
+final validate = authInstance.validate(accessToken: 'zzz');
 ```
 
 Revoke access token
 ```dart
 
-final revoke = authInstance?.revoke(clientId: 'my_client_id', accessToken: 'zzz');
+final revoke = authInstance.revoke(clientId: 'my_client_id', accessToken: 'zzz');
 ```
 
 ## Additional information
