@@ -1,5 +1,5 @@
 name: unofficial_twitch_auth
-description: Wrapper of Twitch API for authentication processes
+description: Wrapper for the newest Twitch API for the OAuth authentication processes.
 version: 0.0.1
 homepage: https://www.federicoviceconti.com
 

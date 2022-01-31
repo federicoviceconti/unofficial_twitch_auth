@@ -7,6 +7,7 @@ class AuthRevokeResponse extends BaseHttpResponse {
     String? message,
   }) : super(message: message, status: status);
 
+  /// Convert the HTTP response into the [AuthRevokeResponse]
   static AuthRevokeResponse fromHttpResponse(
     int statusCode,
     String responseBody,

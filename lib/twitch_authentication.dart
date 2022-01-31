@@ -25,7 +25,7 @@ abstract class TwitchAuthentication {
     List<LoginScope> scopes = const [LoginScope.openId]
   });
 
-  /// Validate the token retrieved via the OAuth process.
+  /// Validate the [accessToken] retrieved via the OAuth process.
   ///
   /// For more information, please read the link below:
   /// https://dev.twitch.tv/docs/authentication#validating-requests
@@ -33,7 +33,8 @@ abstract class TwitchAuthentication {
     required String accessToken
   });
 
-  /// Revoke the token acquired during the OAuth process.
+  /// Revoke the [accessToken] acquired during the OAuth process using the
+  /// [clientId] indicated.
   ///
   /// For more information, please read the link below:
   /// https://dev.twitch.tv/docs/authentication#revoking-access-tokens

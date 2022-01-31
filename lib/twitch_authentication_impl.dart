@@ -8,6 +8,7 @@ import 'models/login_scope.dart';
 import 'twitch_authentication.dart';
 
 /// Implementation of the [TwitchAuthentication] class.
+/// For the usage, refer to the [TwitchAuthentication] class.
 class TwitchAuthenticationImpl extends TwitchAuthentication {
   @override
   TwitchHttpClientImpl get client => TwitchHttpClientImpl(
@@ -53,6 +54,7 @@ class TwitchAuthenticationImpl extends TwitchAuthentication {
     );
   }
 
+  /// Convert the [scopes] list, to one single string
   String _getScopes(List<LoginScope> scopes) {
     return scopes
         .map((scope) => scope.name)

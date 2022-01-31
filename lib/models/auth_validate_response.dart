@@ -22,6 +22,7 @@ class AuthValidateResponse extends BaseHttpResponse {
     status: status
   );
 
+  /// Convert the body of the HTTP response into the [AuthRevokeResponse]
   static AuthValidateResponse fromJson(Map<String, dynamic> json) {
     return AuthValidateResponse(
       status: json['status'],
@@ -34,10 +35,12 @@ class AuthValidateResponse extends BaseHttpResponse {
     );
   }
 
+  /// Convert the HTTP response into the [AuthValidateResponse]
   static AuthValidateResponse fromHttpResponse(String body) {
     return AuthValidateResponse.fromJson(jsonDecode(body));
   }
 
+  /// Convert the scopes into a string list
   static List<String> _convertScopeList(Map<String, dynamic> json) {
     try {
       return json['scopes'].map((it) => it?.toString()).cast<String>().toList();

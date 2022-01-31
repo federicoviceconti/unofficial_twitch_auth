@@ -1,3 +1,5 @@
+/// Contains all the scopes described at the following link:
+/// https://dev.twitch.tv/docs/authentication#scopes
 enum LoginScope {
   openId,
   analyticsReadExtensions,
